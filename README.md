@@ -38,3 +38,11 @@ Run the server
 ```bash
 rails s
 ```
+
+## Tests
+
+Run tests
+
+```bash
+bin/rake
+```
