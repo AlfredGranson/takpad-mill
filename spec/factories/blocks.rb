@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :block do
-    page_id { 1 }
-    type { "" }
+    association :page
+
+    type { "Blocks::Text" }
     body { "MyString" }
   end
 end

@@ -2,11 +2,21 @@ require 'rails_helper'
 
 RSpec.describe PageResource, type: :resource do
   describe 'creating' do
+    let!(:folder) { create :folder }
+
     let(:payload) do
       {
         data: {
           type: 'pages',
-          attributes: attributes_for(:page)
+          attributes: attributes_for(:page),
+          relationships: {
+            folder: {
+              data: {
+                id: folder.id,
+                type: "folders"
+              }
+            }
+          }
         }
       }
     end

@@ -6,6 +6,8 @@ RSpec.describe "blocks#create", type: :request do
   end
 
   describe 'basic create' do
+    let!(:page) { create :page }
+
     let(:params) do
       attributes_for(:block)
     end
@@ -13,7 +15,15 @@ RSpec.describe "blocks#create", type: :request do
       {
         data: {
           type: 'blocks',
-          attributes: params
+          attributes: params,
+          relationships: {
+            page: {
+              data: {
+                id: page.id,
+                type: "pages"
+              }
+            }
+          }
         }
       }
     end

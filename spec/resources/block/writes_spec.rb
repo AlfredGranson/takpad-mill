@@ -2,11 +2,21 @@ require 'rails_helper'
 
 RSpec.describe BlockResource, type: :resource do
   describe 'creating' do
+    let!(:page) { create :page }
+
     let(:payload) do
       {
         data: {
           type: 'blocks',
-          attributes: attributes_for(:block)
+          attributes: attributes_for(:block),
+          relationships: {
+            page: {
+              data: {
+                id: page.id,
+                type: "pages"
+              }
+            }
+          }
         }
       }
     end

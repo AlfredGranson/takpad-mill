@@ -6,6 +6,8 @@ RSpec.describe "pages#create", type: :request do
   end
 
   describe 'basic create' do
+    let!(:folder) { create :folder }
+
     let(:params) do
       attributes_for(:page)
     end
@@ -13,7 +15,15 @@ RSpec.describe "pages#create", type: :request do
       {
         data: {
           type: 'pages',
-          attributes: params
+          attributes: params,
+          relationships: {
+            folder: {
+              data: {
+                id: folder.id,
+                type: "folders"
+              }
+            }
+          }
         }
       }
     end
