@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_15_194612) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_15_195628) do
+  create_table "folders", force: :cascade do |t|
+    t.integer "folder_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pages", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
