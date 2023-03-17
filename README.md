@@ -1,24 +1,34 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Takpad mill
 
-Things you may want to cover:
+Backend for takpad note sharing and collaboration app.
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+Ruby v3.1.1
 
-* Configuration
+## Installation
 
-* Database creation
+Download repo
 
-* Database initialization
+```bash
+git@github.com:AlfredGranson/takpad-mill.git
+cd takpad-mill
+```
+Install the app/gems
 
-* How to run the test suite
+```bash
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Run migrations
 
-* Deployment instructions
+```bash
+bundle exec rails db:migrate
+```
 
-* ...
+Run the server
+
+```bash
+rails s
+```
