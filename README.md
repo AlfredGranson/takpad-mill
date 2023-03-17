@@ -27,6 +27,12 @@ Run migrations
 bundle exec rails db:migrate
 ```
 
+Optionally seed some test data
+
+```bash
+bundle exec rails db:seed
+```
+
 Run the server
 
 ```bash
