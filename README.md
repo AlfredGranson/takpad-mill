@@ -1,5 +1,5 @@
 
-# Takpad mill
+# Takpad mill [![Ruby on Rails CI](https://github.com/AlfredGranson/takpad-mill/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/AlfredGranson/takpad-mill/actions/workflows/rubyonrails.yml)
 
 Backend for takpad note sharing and collaboration app.
 
